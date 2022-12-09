@@ -1,67 +1,75 @@
-.vrac {
-    "X" solid 0 0 0 0 0 100% 100% 100% 1rem 
-    solid #fff  2rem 50% auto 
-    border  bottom center   content cursor
-    fixed height height left line-height 
-    place-content pointer  position
-    rgba(0,0,0,0.9) right  top width width
-    }
-    .overlay {
-        /* Sit on top of the page content */
+.overlay {
+    /* Sit on top of the page content */
+    position: absolute;
+    /* Full width (cover the whole page) */
+    width: 100vw;
+    /* Full height (cover the whole page) */
+    height: 100vw;
+    /* Stay at the top */
+    top: 0;
+    /* Stay at the left */
+    left: 0;
+    /* Stay at the right */
+    right: 0;
+    /* Stay at the bottom */
+    bottom: 0;
+    /* Black background with opacity */
+    background-color: rgba(0, 0, 0, .7);
+    /* Add a pointer on hover */
+    cursor: pointer;
+    /* Use a grid for easy centering */
+    display: grid;
+    /* Center vertically and horizontally */
+    place-content: center;
+}
 
-        /* Full width (cover the whole page) */
+.overlay::after {
+    /* Add content : "X" */
+    content: "X"; /on peut mettre les svg mais probleme pr les rendimensionnées/
+    /* White text color */
+    color: #fff;
+    /* Black background color */
+    background-color: #000;
+    /* Font family "sans-serif" */
+    font-family: sans-serif;
+    /* Centered text */
+    text-align: center;
+    /* Line height ( idem height ) */
+    line-height: 2rem;
+    /* Display as a block */
+    display: block;
+    /* Position absolute */
+    position: absolute;
+    /* 1rem from the top */
+    top: 1rem;
+    /* 1rem from the right */
+    right: 1rem;
+    /* 2rem width */
+    width: 2rem; 
+    /* 2rem height */
+    height: 2rem;
+    /* White border of 2px */
+    border: white  solid 2px;
+    /* Rounded border */
+    border-radius: 50%;
+}
 
-        /* Full height (cover the whole page) */
-        /* Stay at the top */
-        /* Stay at the left */
-        /* Stay at the right */
-        /* Stay at the bottom */
-        /* Black background with opacity */
-        background-color: black;
-        /* Add a pointer on hover */
-        
-        /* Use a grid for easy centering */
-        display: grid;
-        /* Center vertically and horizontally */
-place-content: ;
-    }
-    .overlay::after {
-        /* Add content : "X" */
-        color: blueviolet;
-        background-color: black;
-        font-family: sans-serif;
-        text-align: center;
-        line-height: ;
-        /* Display as a block */
-        display: block;
-        /* Position absolute */
-        position: absolute;
-        /* 1rem from the top */
-        top: 1rem;
-        /* 1rem from the right */
-        right: 1rem;
-        /* 2rem width */
-        width: 2rem;
-        /* 2rem height */
-        height: 2rem;
-        /* White border of 2px */
-        border: white, 2px;
-        
-        /* Rounded border */
-        border-radius: ;
-    }
-    .overlay>figure {
-        /* No margin */
-        margin: none;
-        /* 1rem padding */
-        padding: 1rem;
-        /* White border of 2px */
-        border: white, 2px;
-    }
-    
-    .overlay>figure>img {
-        /* Max width 100% for responsive image */
-        max-width: 100%;
-        /* Height auto for keeping the ratio */
-        height: auto;
-    }
+img {
+
+max-width: 100%;
+height: auto;
+
+}
+.overlay>figure {
+    /* Max width of the figure : 100% */
+    width: 100%;
+    /* Max height of the figure : 100% */
+    height: 100%;
+    /* No margin */
+    margin: 5rem;
+    /* 1rem padding */
+    padding: 1rem;
+    /* White border of 2px */
+    border: 2px solid #fff;
+
+}
